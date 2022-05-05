@@ -6,6 +6,7 @@ public class CubeBullet : Bullet
 {
     public override void Effect(Collision collider)
     {
+        base.Effect(collider);
         if(collider.gameObject.CompareTag("Wall"))
         collider.gameObject.GetComponent<ColliderInteraction>().DisableCollider();
     }

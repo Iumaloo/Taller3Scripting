@@ -11,12 +11,15 @@ public class CapsuleBullet : Bullet
 
     public override void Effect(Collision collider)
     {
+
         particles.Play();
         if (PrefabRenderer == null)
             PrefabRenderer = GetComponent<MeshRenderer>();
         PrefabRenderer.enabled = false;
-
+        Invoke("BackToPool", 2f);
     }
+
+
 
     public override void Inicializate()
     {

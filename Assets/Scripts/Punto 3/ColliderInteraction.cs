@@ -5,6 +5,8 @@ using System;
 
 public class ColliderInteraction : MonoBehaviour
 {
+    static private ColliderInteraction instance;
+
     BoxCollider Wallcollider;
 
     public Action OnColliderDisable;
@@ -12,6 +14,20 @@ public class ColliderInteraction : MonoBehaviour
 
     float timer;
     bool colliderDisabled;
+
+    public static ColliderInteraction Instance { get => instance;}
+
+    private void Awake()
+    {
+        if(instance != null)
+        {
+            Destroy(instance);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -33,6 +49,7 @@ public class ColliderInteraction : MonoBehaviour
         }
         else
         {
+            Wallcollider.enabled = true;
             OnColliderEnable?.Invoke();
         }
     }

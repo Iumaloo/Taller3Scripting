@@ -32,7 +32,7 @@ public abstract class Pool : MonoBehaviour
     private void AddBullet()
     {
         Rigidbody instance = Instantiate(bulletPrefab);
-        bulletPrefab.GetComponent<Bullet>().OnHit += ReleaseBullet;
+        instance.gameObject.GetComponent<Bullet>().OnHit += ReleaseBullet;
         instance.gameObject.SetActive(false);
         bullets.Add(instance);
     }
@@ -62,15 +62,4 @@ public abstract class Pool : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

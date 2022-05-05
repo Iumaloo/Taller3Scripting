@@ -35,13 +35,18 @@ public abstract class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        OnHit?.Invoke(rb);
         Effect(collision);
     }
 
     public virtual void Effect(Collision collider)
     {
+        OnHit?.Invoke(rb);
+    }
 
+
+    public void BackToPool()
+    {
+        OnHit?.Invoke(rb);
     }
 
 }
