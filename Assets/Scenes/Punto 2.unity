@@ -140,6 +140,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fbc881088fb48458350429949fbb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newColor: {r: 0, g: 0, b: 0, a: 0}
+  colors:
+  - {r: 1, g: 0.889876, b: 0.0603773, a: 0}
+  - {r: 0.5279206, g: 1, b: 0.47547168, a: 0}
+  - {r: 1, g: 0.53207546, b: 0.53207546, a: 0}
+  - {r: 0.7134509, g: 0.4663581, b: 0.9433962, a: 0}
   colorValue: 0
 --- !u!1 &604031803
 GameObject:

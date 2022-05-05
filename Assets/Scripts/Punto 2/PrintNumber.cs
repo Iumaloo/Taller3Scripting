@@ -19,7 +19,7 @@ public class PrintNumber : MonoBehaviour
     }
     private void PrintNumbers()
     {
-             Debug.Log(changeColors.colorValue);
+       Debug.Log(changeColors.colorValue);
         
        
     }
