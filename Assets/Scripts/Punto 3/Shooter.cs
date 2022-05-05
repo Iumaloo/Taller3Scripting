@@ -8,6 +8,8 @@ public class Shooter : MonoBehaviour
     SpherePool spherePool;
     CapsulePool capsulePool;
     Pool selectedPool;
+
+    int poolIndex;
     private void Start()
     {
         cubePool = GetComponent<CubePool>();
@@ -24,10 +26,28 @@ public class Shooter : MonoBehaviour
             Rigidbody bullet = selectedPool.GetBullet();
             bullet.transform.position = transform.position;
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            ChangePool();
+        }
     }
 
     void ChangePool()
     {
+        poolIndex++;
 
+        if(poolIndex > 3)
+            poolIndex = 0;
+
+        switch (poolIndex)
+        {
+            case 0: selectedPool = cubePool;
+                break;
+            case 1: selectedPool = spherePool;
+                break ; 
+            case 2: selectedPool = capsulePool;
+                break;
+        }
     }
 }

@@ -10,7 +10,7 @@ public abstract class Bullet : MonoBehaviour
     [SerializeField]
     float force;
 
-    public Action<Rigidbody> OnHit;
+    public event Action<Rigidbody> OnHit;
 
     private void Awake()
     {
