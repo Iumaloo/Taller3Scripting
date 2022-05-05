@@ -17,7 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Punto 3.unity
     guid: 64a5b618dc3806b4383cd505f9f0a240
-  - enabled: 1
-    path: Assets/Scenes/Punto 4.unity
-    guid: abd90cdae78a740458f1bf6aa25f8d9a
   m_configObjects: {}
