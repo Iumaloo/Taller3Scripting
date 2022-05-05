@@ -14,14 +14,13 @@ public class ChangeColor : MonoBehaviour
     void Start()
     {
 
-        spriteGenerator.OnButtonClicked += ChangeColors;
+        EventManager.OnButtonClicked += ChangeColors;
         cubeRenderer = GetComponent<Renderer>();
         colorValue = 0;
     }
     private void ChangeColors()
     {
       
-       
         colorValue++;
         if (colorValue > 3)
         {
@@ -32,7 +31,7 @@ public class ChangeColor : MonoBehaviour
     }
     private void OnDisable()
     {
-        spriteGenerator.OnButtonClicked -= ChangeColors;
+        EventManager.OnButtonClicked -= ChangeColors;
     }
     // Update is called once per frame
     void Update()

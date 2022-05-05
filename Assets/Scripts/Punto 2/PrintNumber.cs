@@ -8,7 +8,7 @@ public class PrintNumber : MonoBehaviour
     ChangeColor changeColors;
     void Start()
     {
-        spriteGenerator.OnButtonClicked += PrintNumbers;
+        EventManager.OnButtonClicked += PrintNumbers;
         changeColors = FindObjectOfType<ChangeColor>();
     }
 
@@ -25,6 +25,6 @@ public class PrintNumber : MonoBehaviour
     }
     private void OnDisable()
     {
-        spriteGenerator.OnButtonClicked -= PrintNumbers;
+       EventManager.OnButtonClicked -= PrintNumbers;
     }
 }

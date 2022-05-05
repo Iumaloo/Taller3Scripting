@@ -17,6 +17,10 @@ public class Mastermain : MonoBehaviour
     {
 
     }
+    public void Escena_Main()
+    {
+        SceneManager.LoadScene("Master");
+    }
     public void Escena_uno ()
     {
         SceneManager.LoadScene("Punto 1");

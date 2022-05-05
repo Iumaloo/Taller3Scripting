@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class spriteGenerator : MonoBehaviour
+public class EventManager : MonoBehaviour
 {
    
     //public delegate void Action();
